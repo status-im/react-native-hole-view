@@ -1,6 +1,8 @@
 
 buildscript {
-    ext.kotlin_version = '1.4.31'
+    def kotlin_version = rootProject.ext.has('RNHV_kotlinVersion') ? rootProject.ext.get('RNHV_kotlinVersion') : project.properties['RNHV_kotlinVersion']
+    def gradle_version = rootProject.ext.has('RNHV_gradleVersion') ? rootProject.ext.get('RNHV_gradleVersion') : project.properties['RNHV_gradleVersion']
+
 
     repositories {
         google()
@@ -8,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
     }
@@ -46,6 +48,8 @@ repositories {
         url "$rootDir/../../../node_modules/react-native/android"
     }
 }
+
+def kotlin_version = safeExtGet('kotlinVersion', project.properties['RNHV_kotlinVersion'])
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
