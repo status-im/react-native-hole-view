@@ -1,6 +1,6 @@
 {
   "name": "react-native-hole-view",
-  "version": "3.0.0-alpha3",
+  "version": "3.0.1-status",
   "description": "Component to made an overlay with touch-through hole",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -48,7 +48,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ibitcy/react-native-hole-view.git"
+    "url": "git+https://github.com/status-im/react-native-hole-view.git"
   },
   "bugs": {
     "url": "https://github.com/ibitcy/react-native-hole-view/issues"
